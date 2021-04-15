@@ -2,7 +2,7 @@ const express = require('express');
 const router = require('./routes');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const { errorHandler } = require('./helpers');
+const errorHandler = require('./helpers/error-handler');
 
 const app = express();
 
