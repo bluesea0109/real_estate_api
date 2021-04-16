@@ -42,7 +42,7 @@ module.exports = {
           .json({ message: 'Not allowed to upgrade to ADMIN' });
       }
 
-      if (req.body.role === Role.CLIENT && req.user.role === Role.REALTOR) {
+      if (req.body.role === Role.CLIENT && req.user.role === Role.OWNER) {
         return res
           .status(400)
           .json({ message: 'Not allowed to downgrade to CLIENT' });

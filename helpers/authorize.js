@@ -7,7 +7,7 @@ module.exports = authorize;
 
 function authorize(roles = []) {
   // roles param can be a single role string (e.g. Role.CLINENT)
-  // or an array of roles (e.g. [Role.ADMIN, Role.OWNER])
+  // or an array of roles (e.g. [Role.ADMIN, Role.REALTOR])
   if (typeof roles === 'string') {
     roles = [roles];
   }
