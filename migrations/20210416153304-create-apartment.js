@@ -26,6 +26,10 @@ module.exports = {
       longitude: {
         type: Sequelize.FLOAT,
       },
+      rented: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+      },
       realtorId: {
         type: Sequelize.INTEGER,
         references: {

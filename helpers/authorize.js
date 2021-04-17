@@ -3,9 +3,7 @@ const { secret } = require('../config/auth.config.js');
 const db = require('../models');
 const User = db.User;
 
-module.exports = authorize;
-
-function authorize(roles = []) {
+const authorize = (roles = []) => {
   // roles param can be a single role string (e.g. Role.CLINENT)
   // or an array of roles (e.g. [Role.ADMIN, Role.REALTOR])
   if (typeof roles === 'string') {
@@ -54,4 +52,6 @@ function authorize(roles = []) {
       next();
     },
   ];
-}
+};
+
+module.exports = authorize;

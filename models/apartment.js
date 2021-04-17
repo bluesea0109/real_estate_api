@@ -42,6 +42,7 @@ module.exports = (sequelize, DataTypes) => {
       numberOfRooms: DataTypes.INTEGER,
       latitude: DataTypes.FLOAT,
       longitude: DataTypes.FLOAT,
+      rented: DataTypes.BOOLEAN,
       realtorId: DataTypes.INTEGER,
     },
     {
