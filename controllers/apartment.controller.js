@@ -37,7 +37,9 @@ module.exports = {
 
     await Apartment.create(payload)
       .then((data) => res.json(data))
-      .catch((err) => next(err));
+      .catch((err) => {
+        next(err);
+      });
   },
 
   show: async (req, res) => {

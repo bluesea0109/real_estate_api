@@ -17,6 +17,9 @@ module.exports = {
       floorAreaSize: {
         type: Sequelize.FLOAT,
       },
+      pricePerMonth: {
+        type: Sequelize.FLOAT,
+      },
       numberOfRooms: {
         type: Sequelize.INTEGER,
       },
@@ -25,6 +28,9 @@ module.exports = {
       },
       longitude: {
         type: Sequelize.FLOAT,
+      },
+      address: {
+        type: Sequelize.STRING,
       },
       rented: {
         type: Sequelize.BOOLEAN,

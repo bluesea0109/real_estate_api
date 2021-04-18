@@ -39,9 +39,12 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
       floorAreaSize: DataTypes.FLOAT,
+      pricePerMonth: DataTypes.FLOAT,
+
       numberOfRooms: DataTypes.INTEGER,
       latitude: DataTypes.FLOAT,
       longitude: DataTypes.FLOAT,
+      address: DataTypes.STRING,
       rented: DataTypes.BOOLEAN,
       realtorId: DataTypes.INTEGER,
     },

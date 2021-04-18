@@ -18,8 +18,10 @@ const setApartment = async (req, res, next) => {
 
       if (
         req.method !== 'GET' &&
-        req.currentUser.role === Role.REALTOR &&
-        req.currentUser.id !== apartment.realtorId
+        // req.currentUser.role === Role.REALTOR &&
+        // req.currentUser.id !== apartment.realtorId
+        req.currentUser.role !== Role.REALTOR &&
+        req.currentUser.role !== Role.ADMIN
       ) {
         return res.status(401).json({ message: 'Unauthorized' });
       }
@@ -31,7 +33,7 @@ const setApartment = async (req, res, next) => {
 };
 
 router.get('/', authorize(), controller.index);
-router.post('/', authorize([Role.REALTOR, Role.ADMIN]), controller.create);
+router.post('/', authorize([Role.ADMIN, Role.REALTOR]), controller.create);
 router.get('/:id', authorize(), setApartment, controller.show);
 router.patch(
   '/:id',
